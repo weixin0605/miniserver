@@ -29,11 +29,26 @@
         <generator.mysql.version>5.1.45</generator.mysql.version>
         <swagger.version>2.6.1</swagger.version>
         <org.codehaus.jackson.version>1.9.13</org.codehaus.jackson.version>
+
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframe.boot</groupId>
+                    <artifactId>spring-boot-statrer-logger</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
